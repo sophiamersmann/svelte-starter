@@ -1,0 +1,9 @@
+/node_modules/
+/dist/
+/.vscode/
+.DS_Store
+
+README.md
+
+*.json
+vite.config.js
