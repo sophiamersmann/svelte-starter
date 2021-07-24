@@ -11,19 +11,33 @@
   "homepage": "https://github.com/sophiamersmann/svelte-starter#readme",
   "bugs": "https://github.com/sophiamersmann/svelte-starter/issues",
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "lint:eslint": "eslint --fix 'src/**'",
-    "lint:stylelint": "npx stylelint '**/*.svelte'",
+    "lint:stylelint": "npx stylelint --fix '**/*.svelte'",
     "lint:prettier": "npx prettier --write ."
+  },
+  "lint-staged": {
+    "*.svelte": [
+      "eslint --fix",
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.0",
     "prettier": "2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
     "stylelint": "^13.13.1",
