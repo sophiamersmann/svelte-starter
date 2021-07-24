@@ -29,7 +29,8 @@
     "*.{js,jsx}": [
       "eslint --fix",
       "prettier --write"
-    ]
+    ],
+    "*.html": "prettier --write"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
