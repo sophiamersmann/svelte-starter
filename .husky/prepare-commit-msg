@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# gitmoji as a commit hook
+exec < /dev/tty
+gitmoji --hook $1 $2
