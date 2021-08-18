@@ -17,8 +17,8 @@
     "serve": "vite preview",
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "lint:eslint": "eslint --fix 'src/**'",
-    "lint:stylelint": "npx stylelint --fix '**/*.svelte'",
-    "lint:prettier": "npx prettier --write ."
+    "lint:stylelint": "stylelint --fix '**/*.svelte'",
+    "lint:prettier": "prettier --write ."
   },
   "lint-staged": {
     "*.svelte": [
